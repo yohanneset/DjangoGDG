@@ -1,0 +1,16 @@
+{% extends "loan/base.html" %}
+{% block content %}
+    <div class="container mt-4">
+
+    <div class="card p-4 mb-4 shadow-sm">
+        <h4 class="mb-3">Add Loan</h4>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-success">Add Loan</button>
+        </form>
+    </div>
+{% endblock %}
+</div>

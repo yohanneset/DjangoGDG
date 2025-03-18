@@ -1,0 +1,15 @@
+{% extends "loan/base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="card p-4 shadow-sm">
+        <h4 class="mb-3 text-danger">Confirm Deletion</h4>
+        <p>Are you sure you want to delete the loan record for <strong>{{ object.name }}</strong>?</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
